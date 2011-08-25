@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:composite="http://java.sun.com/jsf/composite"
+	xmlns:p="http://primefaces.prime.com.tr/ui">
+
+<h:head>
+	<link type="text/css" rel="stylesheet"
+		href="#{facesContext.externalContext.requestContextPath}/resources/css/style.css" />
+</h:head>
+
+<!-- MENU DA PAGINA -->
+<h:body>
+	<body>
+
+		<ui:composition>
+
+			<h:form>
+				<p:growl id="messages" />
+
+				<p:menubar autoSubmenuDisplay="true">
+					<p:submenu label="${msgs.cliente}"
+						icon="ui-icon ui-icon-document">
+
+
+						<p:menuitem value="${msgs.cadastra}"
+							url="/pages/usuario/cliente/cadastra.jsf"  icon="ui-icon ui-icon-disk" helpText="CTRL+Z">
+							</p:menuitem>
+
+						<p:menuitem value="${msgs.buscar}" url="/pages/usuario/cliente/pesquisar.jsf"  icon="ui-icon ui-icon-search"/>
+
+					</p:submenu>
+
+					<p:submenu label="${msgs.titulo_produto}"
+						icon="ui-icon ui-icon-document">
+
+						<p:menuitem value="${msgs.cadastra}"
+							url="/pages/usuario/produto/cadastra.jsf" icon="ui-icon ui-icon-disk" helpText="CTRL+Z"></p:menuitem>
+
+						<p:menuitem value="${msgs.buscar}" url="#"  icon="ui-icon ui-icon-search"
+							helpText="CTRL+Y"></p:menuitem>
+					</p:submenu>
+
+					<p:submenu label="${msgs.ajuda}" icon="ui-icon ui-icon-help">
+						<p:menuitem value="${msgs.conteudo}" url="#" icon="ui-icon ui-icon-refresh" />
+					</p:submenu>
+				</p:menubar>
+
+
+			</h:form>
+		</ui:composition>
+	</body>
+</h:body>
+
+</html>

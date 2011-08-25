@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:composite="http://java.sun.com/jsf/composite"
+	xmlns:p="http://primefaces.prime.com.tr/ui"
+	xmlns:display="urn:jsptld:http://displaytag.sf.net">
+
+<h:head>
+	<link type="text/css" rel="stylesheet"
+		href="#{facesContext.externalContext.requestContextPath}/resources/css/style.css" />	
+</h:head>
+
+<!-- PAGINA PRINCIPAL -->
+
+<h:body>
+	<body>
+		<div id="wrapper">
+		
+          <!-- EXIBE TOPO DA PAGINA -->
+          
+			<div id="header">
+				<div id="logo">
+					<ui:insert name="topo">
+						<ui:include src="../templates/top.xhtml" />
+					</ui:insert>
+				</div>
+				<div id="search"></div>
+			</div>
+
+         	<!-- EXIBE MENU DA PAGINA -->
+			<div id="menu">
+				<ui:insert name="menu">
+					<ui:include src="../templates/menu.xhtml" />
+				</ui:insert>
+			</div>
+
+			<!-- EXIBE MENSSAGEN NAS PAGINAS- DESABILITADO AS MENSSAGENS SÃO EXIBIDAS PELO PRIMEFACES
+			<div id="page">
+				<ui:insert name="message">
+					<ui:include src="../templates/message.xhtml" />
+				</ui:insert>
+			</div>-->
+
+         <!-- EXIBE CORPO DA PAGINA -->
+
+			<div id="page">
+				<ui:insert name="corpo">
+					<ui:include src="../templates/body.xhtml" />
+				</ui:insert>
+			</div>
+
+		</div>
+      
+      <!-- EXIBE RODAPE DA PAGINA -->
+		<div id="footer">
+			<ui:insert name="rodape">
+				<ui:include src="../templates/footer.xhtml" />
+			</ui:insert>
+		</div>
+
+	</body>
+</h:body>
+
+
+</html>

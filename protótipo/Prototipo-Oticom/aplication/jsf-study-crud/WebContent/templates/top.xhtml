@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:composite="http://java.sun.com/jsf/composite"
+	xmlns:p="http://primefaces.prime.com.tr/ui">
+
+<h:head>
+	<link type="text/css" rel="stylesheet"
+		href="#{facesContext.externalContext.requestContextPath}/resources/css/style.css" />
+</h:head>
+<h:body>
+	<body>
+
+		<!-- TOPO DA PAGINA -->
+
+		<ui:composition>
+			<f:view locale="#{localeController.currentLocale}">
+				<h:form>
+					<h2></h2>
+					<center>
+						<h:panelGrid columns="1">
+							<h:graphicImage id="topo"
+								value="/resources/images/oculos_icone.jpg"></h:graphicImage><h2>OtiCom</h2>
+						</h:panelGrid>
+						<h:panelGrid columns="2">
+							<h:commandLink value=""
+								action="#{localeController.portugueseLocale}">
+								<h:graphicImage id="imageBR" value="/resources/images/br.png" />
+							</h:commandLink>
+							<h:commandLink value=""
+								action="#{localeController.englishLocale}">
+								<h:graphicImage id="imageUS" value="/resources/images/us.png" />
+							</h:commandLink>
+						</h:panelGrid>
+					</center>
+				</h:form>
+			</f:view>
+		</ui:composition>
+	</body>
+</h:body>
+</html>

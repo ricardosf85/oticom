@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+	version="2.0">
+	
+	<!-- CONFIGURAÇÃO INTERNACIONALIZAÇÃO -->
+	<application>
+		<resource-bundle>
+			<base-name>messages.message</base-name>
+			<var>msgs</var>
+		</resource-bundle>
+		
+		<locale-config>
+			<default-locale>pt_BR</default-locale>
+			<supported-locale>en_US</supported-locale>
+		</locale-config>
+	</application>
+	
+	<!-- CONFIGURAÇÃO DO SPRING -->
+	<!-- <application>
+    <variable-resolver>
+        org.springframework.web.jsf.DelegatingVariableResolver
+    </variable-resolver>
+    </application> -->
+	
+	<!-- CONFIGURAÇÃO DO SPRING SECURITY -->
+	
+	 <application>
+	        <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+	    </application>
+	    <lifecycle>
+	        <phase-listener>br.com.study.security.LoginErrorPhaseListener</phase-listener>
+	  </lifecycle>
+	
+	
+   <!--CONFIGURAÇÃO DE NAVEGAÇÃO EXEMPLO -->
+	<navigation-rule>
+		<from-view-id>/pages/inputname.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>greeting</from-outcome>
+			<to-view-id>/pages/greeting.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/pages/inputname.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>greeting</from-outcome>
+			<to-view-id>/pages/greeting.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<!-- NAVEGAÇÃO CLIENTE -->
+	<navigation-rule>
+		<from-view-id>/usuario/cliente/cadastra.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>sucesso</from-outcome>
+			<to-view-id>/usuario/cliente/cadastra.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+
+</faces-config>

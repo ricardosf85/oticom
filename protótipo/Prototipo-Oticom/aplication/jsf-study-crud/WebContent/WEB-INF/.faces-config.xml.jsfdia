@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#pages#inputname.xhtml"
+  PATH="/pages/inputname.xhtml" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#pages#inputname.xhtml:0" NAME="item"
+   PATH="/pages/inputname.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="greeting::#pages#greeting.xhtml"
+    NAME="output" PATH="/pages/greeting.xhtml"
+    TARGET="rules:#pages#greeting.xhtml" TITLE="greeting" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#pages#inputname.xhtml:1" NAME="item1"
+   PATH="/pages/inputname.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="greeting::#pages#greeting.xhtml"
+    NAME="output" PATH="/pages/greeting.xhtml"
+    TARGET="rules:#pages#greeting.xhtml" TITLE="greeting" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#pages#greeting.xhtml"
+  PATH="/pages/greeting.xhtml" SHAPE="256,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#usuario#cliente#cadastra.xhtml"
+  PATH="/usuario/cliente/cadastra.xhtml" SHAPE="48,161,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#usuario#cliente#cadastra.xhtml:0" NAME="item"
+   PATH="/usuario/cliente/cadastra.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="sucesso::#usuario#cliente#cadastra.xhtml"
+    NAME="output" PATH="/usuario/cliente/cadastra.xhtml"
+    TARGET="rules:#usuario#cliente#cadastra.xhtml" TITLE="sucesso" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>

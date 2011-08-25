@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:composite="http://java.sun.com/jsf/composite"
+	xmlns:p="http://primefaces.prime.com.tr/ui">
+
+<h:head>
+	<link type="text/css" rel="stylesheet"
+		href="#{facesContext.externalContext.requestContextPath}/resources/css/style.css" />
+</h:head>
+<h:body>
+	<ui:composition template="/templates/main.xhtml">
+
+		<ui:define name="corpo">
+			<body>
+				<h:form id="cadastroProduto">
+
+					<br></br>
+					<p:panel header="${msgs.cadastra_produto}">
+						<p:tabView>
+							<p:tab title="${msgs.titulo_produto}">
+								<div align="center" style="border: 1">
+
+									<h:panelGrid columns="1" align="center">
+
+										<!-- NOME PRODUTO -->
+										<h:outputLabel value="*${msgs.nome_produto}:"></h:outputLabel>
+										<p:inputText value="#{produtoBean.nomeProduto}" size="35"></p:inputText>
+
+										<!--QUANTIDADE -->
+										<h:outputLabel value="*${msgs.quantidade}:"></h:outputLabel>
+										<p:inputText value="#{produtoBean.quantidade}" size="10"></p:inputText>
+
+										<!--PRATELEIRA-->
+										<h:outputLabel value="*${msgs.prateleira}:"></h:outputLabel>
+										<p:inputText value="#{clienteBean.prateleira}" size="10"></p:inputText>
+
+									</h:panelGrid>
+
+								</div>
+							</p:tab>
+							<p:tab title="${msgs.cadastra_categoria}">
+
+								<p:panel header="${msgs.cadastra_produto}">
+									<h:outputLabel value="*${msgs.categoria}:"></h:outputLabel>
+									<p:inputText value="#{produtoBean.cateogira}" size="25"></p:inputText>
+								</p:panel>
+
+							</p:tab>
+						</p:tabView>
+						<br></br>
+						<center><!-- BOTÃO GRAVAR -->
+						<p:commandButton value="${msgs.gravar}" image="ui-icon ui-icon-disk"
+							update="books msgs @parent" action="#{createBookBean.reinit}">
+							<p:collector value="#{createBookBean.book}"
+								addTo="#{createBookBean.books}" />
+						</p:commandButton></center>
+					</p:panel>
+				</h:form>
+
+			</body>
+		</ui:define>
+
+	</ui:composition>
+</h:body>
+</html>
+
+
+
+

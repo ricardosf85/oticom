@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c_rt="http://java.sun.com/jstl/core_rt"
+	xmlns:p="http://primefaces.prime.com.tr/ui"
+	xmlns:display="urn:jsptld:http://displaytag.sf.net">
+
+<h:head>
+<link type="text/css" rel="stylesheet"
+		href="#{facesContext.externalContext.requestContextPath}/resources/css/style.css" />
+</h:head>
+<h:body>
+	<ui:composition template="/templates/main.xhtml">
+		<ui:define name="corpo">
+			<body>
+				<center>
+
+					<br /> <br /> <br /> # Página do usuário # <br /> <br /> <br />
+	 				
+	<table width="100px" align="center" border="0">
+                      <tr><td>
+     
+	 <display:table name="Tabela" id=""
+						
+	                defaultorder="ascending" pagesize="10"
+				    equestURI=""
+					defaultsort="1" class="ui-widget-content ui-corner-all"
+					style="width: 730px; vertical-align: middle; text-align: left;">
+						
+	 <display:column property="nome" titleKey="${msgs.nome}" sortable="true"></display:column>
+	 <display:column property="email" titleKey="${msgs.email}" sortable="true"></display:column>
+     <display:column property="telefone" titleKey="${msgs.telefone}" sortable="true"></display:column>
+	 <display:column property="sexo" titleKey="${msgs.sexo}" sortable="true"></display:column>
+	 </display:table>
+     </td>
+     </tr>            
+     </table>   
+	 
+
+					<a href="#{facesContext.externalContext.requestContextPath}/pages/inicio.jsf">
+						Voltar </a> <br /> <br /> <a
+						href="#{facesContext.externalContext.requestContextPath}/j_spring_security_logout">
+						Sair </a>
+
+				</center>
+			</body>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
